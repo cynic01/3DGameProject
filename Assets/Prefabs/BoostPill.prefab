@@ -91,12 +91,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8224110539387895213}
-  - component: {fileID: 2200073067735040748}
+  - component: {fileID: -7295210953124325989}
   - component: {fileID: 1142632321061411273}
   - component: {fileID: 1891447970521985889}
   m_Layer: 0
   m_Name: BoostPill
-  m_TagString: HealthPill
+  m_TagString: BoostPill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2200073067735040748
+--- !u!114 &-7295210953124325989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,10 +125,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7972960805330730942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ee5fe2cfb2fde46b0dd0aee9011dde, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a1e8ed4076adb54fb4e9d21ab179cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealthGain: 5
+  m_SpeedGain: 2
 --- !u!65 &1142632321061411273
 BoxCollider:
   m_ObjectHideFlags: 0

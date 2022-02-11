@@ -4872,13 +4872,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6592d1a4fcce14c8e04f93c7feac84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHealth: 1
+  m_MaxHealth: 5
   m_Speed: 1
   m_Damage: 0.1
   m_DeathExplosion: {fileID: 1751476858793735223, guid: 5f7cbf55f3468d34f8f469877a079fbb,
     type: 3}
-  m_HealthPillDropRate: 0.7
+  m_HealthPillDropRate: 0.6
   m_HealthPill: {fileID: 7972960805330730942, guid: 04aed472fa4794f4bae4c1ca57bd48bc,
+    type: 3}
+  m_BoostPillDropRate: 0.1
+  m_BoostPill: {fileID: 7972960805330730942, guid: 8e9afb58e3295a547bd46dd23726ca40,
     type: 3}
   m_Score: 2
 --- !u!114 &637462116

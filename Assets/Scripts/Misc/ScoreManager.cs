@@ -25,6 +25,10 @@ public class ScoreManager : MonoBehaviour
         m_CurScore += amount;
     }
 
+    public int GetCurScore() {
+        return m_CurScore;
+    }
+
     private void UpdateHighScore() {
         if (!PlayerPrefs.HasKey("HS")) {
             PlayerPrefs.SetInt("HS", m_CurScore);

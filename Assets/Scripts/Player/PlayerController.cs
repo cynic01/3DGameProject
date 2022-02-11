@@ -154,6 +154,12 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+    #region Speed Boost
+    public void IncreaseSpeed(int amount) {
+        m_Speed += amount;
+    }
+    #endregion
+
     #region Attack Methods
     private IEnumerator UseAttack(PlayerAttackInfo attack) {
         cc_Rb.rotation = Quaternion.Euler(0, m_CameraTransform.eulerAngles.y, 0);
@@ -189,6 +195,10 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("HealthPill")) {
             IncreaseHealth(other.GetComponent<HealthPill>().HealthGain);
+            Destroy(other.gameObject);
+        } else if (other.CompareTag("BoostPill")) {
+            IncreaseHealth(other.GetComponent<BoostPill>().HealthGain);
+            IncreaseSpeed(other.GetComponent<BoostPill>().SpeedGain);
             Destroy(other.gameObject);
         }
     }

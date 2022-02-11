@@ -30,6 +30,14 @@ public class EnemyController : MonoBehaviour
     private GameObject m_HealthPill;
 
     [SerializeField]
+    [Tooltip("The probability that this enemy drops a health pill")]
+    private float m_BoostPillDropRate;
+
+    [SerializeField]
+    [Tooltip("The type of health pill this enemy drops")]
+    private GameObject m_BoostPill;
+
+    [SerializeField]
     [Tooltip("How many points killing this enemy provides")]
     private int m_Score;
     #endregion
@@ -83,10 +91,12 @@ public class EnemyController : MonoBehaviour
             if (Random.value < m_HealthPillDropRate) {
                 Instantiate(m_HealthPill, transform.position, Quaternion.identity);
             }
+            if (Random.value < m_BoostPillDropRate) {
+                Instantiate(m_BoostPill, transform.position, Quaternion.identity);
+            }
             Instantiate(m_DeathExplosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        
     }
     #endregion
 }
